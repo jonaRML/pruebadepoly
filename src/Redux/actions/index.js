@@ -24,7 +24,7 @@ export function getCourses(name) {
 
   return async (dispatch) => {
     let response = await axios.get(
-      `http://localhost:3001/courses?name=${name}`
+      `https://cursort-production.up.railway.app/courses?name=${name}`
     );
     dispatch({
       type: GET_COURSES,
@@ -144,7 +144,7 @@ export function AllFilterDifficulty(payload){ // ==> llega un obj {duration:'1A5
 //   console.log(duration.duration)
 
 //   return async (dispatch)=>{
-//     const response = await axios.get(`http://localhost:3001/filter/?duration${duration.duration}`) // ==>no se como conseguir todos los query juntos 
+//     const response = await axios.get(`https://cursort-production.up.railway.app/filter/?duration${duration.duration}`) // ==>no se como conseguir todos los query juntos 
 //     console.log('data', response.data)
 //     dispatch({
 //       type: 'GET_FILTER',
